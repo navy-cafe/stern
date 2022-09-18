@@ -1,19 +1,19 @@
 plugins {
     id("java")
+    id("maven-publish")
+    id("org.checkerframework") apply(false)
+    id("com.github.johnrengelman.shadow") apply(false)
 }
 
-group = "cafe.navy.stern"
-version = "1.0-SNAPSHOT"
+allprojects {
+    group = "cafe.navy.stern"
+    version = "1.0-SNAPSHOT"
 
-repositories {
-    mavenCentral()
-}
+    apply(plugin="java")
+    apply(plugin="maven-publish")
+    apply(plugin="org.checkerframework")
 
-dependencies {
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
-}
-
-tasks.getByName<Test>("test") {
-    useJUnitPlatform()
+    repositories {
+        mavenCentral()
+    }
 }

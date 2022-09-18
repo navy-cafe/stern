@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -8,6 +9,26 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/api" />
+            <option value="$PROJECT_DIR$/backend" />
+            <option value="$PROJECT_DIR$/clients" />
+            <option value="$PROJECT_DIR$/clients/discord" />
+            <option value="$PROJECT_DIR$/clients/paper" />
+            <option value="$PROJECT_DIR$/relays" />
+            <option value="$PROJECT_DIR$/relays/json" />
+            <option value="$PROJECT_DIR$/relays/json/client" />
+            <option value="$PROJECT_DIR$/relays/json/server" />
+            <option value="$PROJECT_DIR$/relays/redis" />
+            <option value="$PROJECT_DIR$/relays/redis/client" />
+            <option value="$PROJECT_DIR$/relays/redis/server" />
+            <option value="$PROJECT_DIR$/relays/websockets" />
+            <option value="$PROJECT_DIR$/relays/websockets/client" />
+            <option value="$PROJECT_DIR$/relays/websockets/server" />
+            <option value="$PROJECT_DIR$/targets" />
+            <option value="$PROJECT_DIR$/targets/docker" />
+            <option value="$PROJECT_DIR$/targets/host" />
+            <option value="$PROJECT_DIR$/targets/kubernetes" />
+            <option value="$PROJECT_DIR$/targets/pterodactyl" />
           </set>
         </option>
       </GradleProjectSettings>
