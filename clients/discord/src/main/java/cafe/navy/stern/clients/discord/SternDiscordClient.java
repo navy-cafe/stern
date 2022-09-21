@@ -44,7 +44,7 @@ public class SternDiscordClient {
         this.client = client;
         try {
             this.jda = JDABuilder
-                    .createDefault("MTAyMTg3MTY5ODAwMzM3MDAyNA.G7l2HX.rxPPhcKN-qIwHb46zOOck6R5m10-wcSZmeypgU")
+                    .createDefault(System.getenv("STERN_DISCORD_TOKEN"))
                     .setAutoReconnect(true)
                     .setChunkingFilter(ChunkingFilter.ALL)
                     .setMemberCachePolicy(MemberCachePolicy.ALL)
