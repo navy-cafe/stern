@@ -5,8 +5,6 @@ include("backend")
 
 include(":clients:paper")
 include(":clients:discord")
-project(":clients:paper").name = "clients-paper"
-project(":clients:discord").name = "clients-discord"
 
 include(":relays:json:client")
 include(":relays:json:server")
@@ -14,21 +12,12 @@ include(":relays:redis:client")
 include(":relays:redis:server")
 include(":relays:websockets:client")
 include(":relays:websockets:server")
-project(":relays:json:client").name = "relay-json-client"
-project(":relays:json:server").name = "relay-json-server"
-project(":relays:redis:client").name = "relay-redis-client"
-project(":relays:redis:server").name = "relay-redis-server"
-project(":relays:websockets:client").name = "relay-websockets-client"
-project(":relays:websockets:server").name = "relay-websockets-server"
 
 include(":targets:docker")
 include(":targets:host")
 include(":targets:kubernetes")
 include(":targets:pterodactyl")
-project(":targets:docker").name = "targets-docker"
-project(":targets:host").name = "targets-host"
-project(":targets:kubernetes").name = "targets-kubernetes"
-project(":targets:pterodactyl").name = "targets-pterodactyl"
+include(":targets:memory")
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 enableFeaturePreview("VERSION_CATALOGS")

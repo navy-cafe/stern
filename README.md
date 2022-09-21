@@ -1,6 +1,6 @@
 # stern
 
-An all-in-one, flexible game server management system, with blessed support for Minecraft networks.
+A high-level, abstracted backend for networks of (game) server instances.
 
 ---
 - [the backend](#the-backend)
@@ -74,15 +74,15 @@ client implementations.
 For example, the JSON relay provides an HTTP API to create, destroy, and inspect server instances. The Redis
 relay can be used to receive live updates on server status changes (useful for using a Minecraft proxy such as [Velocity](https://velocitypowered.com/)).
 
-## relays/json
+### relays/json
 
 The JSON relay provides an HTTP API to expose server information to consumers.
 
-## relays/redis
+### relays/redis
 
 The Redis relay pushes live server status changes to a Redis instance over pub-sub.
 
-## relays/grafana
+### relays/grafana
 
 The Grafana relay pushes live server status information to a Grafana dashboard. This relay does not expose any APIs
 on its own, and should be used in conjunction with other relays.
@@ -91,15 +91,15 @@ on its own, and should be used in conjunction with other relays.
 
 A target is an interface between the backend and a system that can host server instances.
 
-## targets/docker
+### targets/docker
 
 The Docker target can be used to interact with a Docker socket and deploy servers as Docker containers.
 
-## targets/kubernetes
+### targets/kubernetes
 
-## targets/pterodactyl
+### targets/pterodactyl
 
-## targets/host
+### targets/host
 
 # the clients
 
@@ -107,18 +107,18 @@ The stern project supports a handful of first-party client implementations.
 These are applications that run separate from a backend instance, and provide additional functionality tailor-made to a specific use case.
 If you find a client that does not meet your requirements, feel free to PR, create an issue, or write your own!
 
-## clients/discord
+### clients/discord
 
 The Discord client for stern provides a bot that can be used to inspect a live stern instance. Additionally, commands
 to initialize and destroy server templates can be used.
 
-## clients/paper
+###  clients/paper
 
 The Paper client for stern provides a plugin that can be installed to a supported Paper server.
 
 The plugin listens for server events such as startup, shutdown, and pushes this information to a stern relay.
 
-## clients/velocity
+### clients/velocity
 
 The Velocity client for stern provides a plugin that can be installed to a supported Velocity server.
 

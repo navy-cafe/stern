@@ -10,6 +10,8 @@ repositories {
 }
 
 dependencies {
+    implementation(projects.api)
+    implementation(projects.relays.json.client)
     paperDevBundle("1.19.2-R0.1-SNAPSHOT")
 }
 

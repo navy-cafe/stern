@@ -28,6 +28,7 @@
             <option value="$PROJECT_DIR$/targets/docker" />
             <option value="$PROJECT_DIR$/targets/host" />
             <option value="$PROJECT_DIR$/targets/kubernetes" />
+            <option value="$PROJECT_DIR$/targets/memory" />
             <option value="$PROJECT_DIR$/targets/pterodactyl" />
           </set>
         </option>

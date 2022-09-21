@@ -2,22 +2,17 @@ package cafe.navy.stern.api.relay;
 
 import cafe.navy.stern.api.messaging.request.CreateServerRequest;
 import cafe.navy.stern.api.messaging.response.CreateServerResponse;
-import cafe.navy.stern.api.server.ServerData;
+import cafe.navy.stern.api.messaging.response.InfoResponse;
+import cafe.navy.stern.api.messaging.response.ListServersResponse;
 import org.checkerframework.checker.nullness.qual.NonNull;
 
-import java.time.Duration;
-import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-public interface RelayProvider {
+public interface RelayClient {
 
-    @NonNull List<String> relays();
+    @NonNull CompletableFuture<@NonNull ListServersResponse> listServers();
 
-    @NonNull List<String> targets();
-
-    @NonNull List<ServerData> listServers();
-
-    @NonNull Duration uptime();
+    @NonNull CompletableFuture<@NonNull InfoResponse> info();
 
     @NonNull CompletableFuture<@NonNull CreateServerResponse> createServer(final @NonNull CreateServerRequest request);
 
